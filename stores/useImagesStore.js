@@ -24,7 +24,6 @@ export const useImagesStore = defineStore("images", () => {
         ids.forEach((id) => params.append("albumId", id));
         url += `?${params.toString()}`;
       }
-      console.log("url", url);
 
       const res = await fetch(url);
       if (!res.ok) throw new Error("Ошибка загрузки данных, статус:");
